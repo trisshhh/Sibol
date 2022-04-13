@@ -178,16 +178,10 @@ require_once 'common/components.php';
     <?= footer() ?>
     <!-- ======================= Footer END -->
 
-    <!-- Vendor Files -->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- ======================= Scripts START -->
+    <?= include 'common/scripts.php' ?>
+    <!-- ======================= Scripts END -->
 
-    <!-- user scripts -->
-    <script src="js/scrollTop.js"></script>
-    <script>
-        AOS.init({
-            once: true
-        });
-    </script>
 
 
 </html>
