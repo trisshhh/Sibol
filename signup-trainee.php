@@ -154,7 +154,7 @@ require_once("common/components.php");
 		firebase.initializeApp(firebaseConfig);
 		firebase.analytics();
 	</script>
-	<script src="firebase.js" type="text/javascript"></script>
+	<script src="js/firebase.js" type="text/javascript"></script>
 
 	<!-- Vendor Files -->
 	<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
