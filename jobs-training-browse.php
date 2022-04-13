@@ -1,6 +1,6 @@
 <?php
 require_once 'common/components.php';
-include("common/connection.php");
+require_once 'utils/connection.php';
 ?>
 
 <!DOCTYPE html>
