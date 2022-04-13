@@ -8,7 +8,7 @@ require_once 'common/components.php';
 <!DOCTYPE html>
 <html lang="en-US">
 
-<?= head("Sibol Training and Placemet Center"); ?>
+<?= head("Sibol Training and Placement Center"); ?>
 
 <body>
     <?= scrollToTopBtn(); ?>
