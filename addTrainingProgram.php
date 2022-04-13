@@ -1,5 +1,5 @@
 <?php
-	include("common/connection.php");
+	include("utils/connection.php");
 	if($_SERVER['REQUEST_METHOD'] == "POST") {
 		$company_name = $_POST['company_name'];
 		$program_name = $_POST['program_name'];
