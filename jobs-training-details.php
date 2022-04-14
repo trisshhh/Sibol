@@ -58,9 +58,14 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
         <section class="py-5">
             <div class="container">
                 <div class="card shadow-lg p-5">
+                    <div class="d-flex mb-4">
+                        <h3 class="me-3"><span class="badge bg-success">Recommended <p class="small mb-0">Skills match: 90% </p></span></h3>
+                        <h3><span class="badge bg-warning">Moderately Far <p class="small mb-0">Proximity: Within 5km </p></span></h3>
+                    </div>
                     <div class="row gy-3 mb-3">
                         <!-- Slots column -->
                         <div class="col-lg-4">
+
                             <div class="card p-3 bg-light text-center shadow mb-3">
                                 <span class="bi bi-people"></span>
                                 <p class="fw-bold">Slots</p>
@@ -75,7 +80,7 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
                             <!-- Program description -->
                             <h4>Description</h4>
                             <p class="mb-3"><?php echo $trainingProgramDesc ?></p>
-                            
+
                             <!-- Program Key Learnings-->
                             <h4>What You'll Learn</h4>
                             <ul>
