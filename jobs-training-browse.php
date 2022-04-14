@@ -26,8 +26,8 @@ require_once 'utils/connection.php';
 				<div class="col-12">
 					<div class="row justify-content-center align-items-center">
 
-                        <!-- Content -->
-                        <div class="col-md-6 px-md-5 text-center position-relative order-md-2 mb-5 mb-md-0">
+						<!-- Content -->
+						<div class="col-md-6 px-md-5 text-center position-relative order-md-2 mb-5 mb-md-0">
 
 							<!-- Svg decoration -->
 							<figure class="position-absolute top-0 start-0">
@@ -59,47 +59,59 @@ require_once 'utils/connection.php';
 	<section class="py-5">
 		<div class="container">
 			<div class="row">
+				<div class="mb-4 d-flex align-items-center">
+					<span class="me-3">Showing Results: </span>
+					<form action="">
+						<select name="showResultsBy" class="form-select">
+							<option value="recommended">Recommended</option>
+							<option value="all">All</option>
+						</select>
+					</form>
+				</div>
+
 				<!-- Main content START -->
 				<div class="col-lg-8 col-xl-9">
-
 					<!-- Course Grid START -->
 					<div class="row g-4">
-					<?php
-					//training_programs (id, program_name, description, ratings, lecture, Hours, instructor) 
+						<?php
+						//training_programs (id, program_name, description, ratings, lecture, Hours, instructor) 
 						$sql = "select * from training_programs;";
 						$result = mysqli_query($con, $sql);
-						if($result) {
+						if ($result) {
 							while ($row = mysqli_fetch_assoc($result)) {
 								$company_name = $row['company_name'];
 								$program_name = $row['program_name'];
 								$description = $row['description'];
-								$ratings = $row['ratings'];
-								$lecture = $row['lecture'];
+								$category = "Customer Service";
 								$Hours = $row['Hours'];
 								$Photo = $row["Photo"];
 								echo '<!-- Card item START -->
 								<div class="col-sm-6 col-xl-4">
 									<div class="card shadow h-100">
 										<!-- Image -->
-										<img src="uploads/training-programs/'.$Photo.'" class="img-thumbnail" alt="course image">
+										<img src="uploads/training-programs/' . $Photo . '" class="img-thumbnail" alt="course image">
 										<!-- Card body -->
 										<div class="card-body">
 											<!-- Badge and favorite -->
 											<div class="d-flex justify-content-between mb-2">
-												<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+												<a href="#" class="badge bg-warning bg-opacity-10 text-light">' . $category . '</a>
 												<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
 											</div>
 											<!-- Title -->
-											<h5 class="card-title"><a href="jobs-training-details.php">'.$program_name.'</a></h5>
-											<p class="small">'.$company_name.'</p>
-											<p class="mb-2 text-truncate-2">'.$description.'</p>
+											<h5 class="card-title"><a href="jobs-training-details.php">' . $program_name . '</a></h5>
+											<p class="small">' . $company_name . '</p>
+											<p class="mb-2 text-truncate-2">' . $description . '</p>
 										</div>
+
+									<div class="card-footer">
+									<p>' . $Hours . ' hours </p>
+									</div>
 									</div>
 								</div>
 								<!-- Card item END -->';
 							}
 						}
-					?>
+						?>
 					</div>
 					<!-- Course Grid END -->
 
@@ -149,7 +161,7 @@ require_once 'utils/connection.php';
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
 													<label class="form-check-label" for="flexCheckDefault10">Customer Service</label>
-												</div>                                               
+												</div>
 											</div>
 											<!-- Checkbox -->
 											<div class="d-flex justify-content-between align-items-center">
@@ -163,21 +175,21 @@ require_once 'utils/connection.php';
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
 													<label class="form-check-label" for="flexCheckDefault12">IT</label>
-												</div>                                            
+												</div>
 											</div>
 											<!-- Checkbox -->
 											<div class="d-flex justify-content-between align-items-center">
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17">
 													<label class="form-check-label" for="flexCheckDefault17">Data Entry</label>
-												</div>                                              
+												</div>
 											</div>
 											<!-- Checkbox -->
 											<div class="d-flex justify-content-between align-items-center">
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13">
 													<label class="form-check-label" for="flexCheckDefault13">Security</label>
-											  </div>                                          
+												</div>
 											</div>
 											<!-- Checkbox -->
 											<div class="d-flex justify-content-between align-items-center">
@@ -191,7 +203,7 @@ require_once 'utils/connection.php';
 												<div class="form-check">
 													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15">
 													<label class="form-check-label" for="flexCheckDefault15">Photography</label>
-												</div>                                          
+												</div>
 											</div>
 										</div>
 									</div>
@@ -215,7 +227,7 @@ require_once 'utils/connection.php';
 	</section>
 	<!-- ======================= Main Content END -->
 
-   
+
 	<!-- ======================= Footer START -->
 	<?= footer() ?>
 	<!-- ======================= Footer END -->
