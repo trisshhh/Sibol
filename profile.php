@@ -11,6 +11,7 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'community') {
 $accountType = "trainee";
 $userName = "Lori Ferguson";
 
+
 $imageUploader = new ImageUploader();
 
 // Compulsory

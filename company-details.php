@@ -3,6 +3,8 @@ require_once 'common/components.php';
 
 //TODO: work on this later, when details are dynamically generated
 $companyName = "7/11 Philippines";
+$location = "Manila Philippines";
+$companyDesc = "7/11 is the leading convenience store chain in the Philippines.";
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +13,10 @@ $companyName = "7/11 Philippines";
 
 <body>
     <?= scrollToTopBtn(); ?>
-    <?= navbar("company") ?>
+    <?= navbar("company-browse") ?>
 
     <!-- ======================= Main Banner START -->
+
     <section class="py-5 py-lg-4 bg-primary-light position-relative">
         <!-- Svg decoration -->
         <figure class="position-absolute bottom-0 start-0 d-none d-lg-block">
@@ -22,45 +25,53 @@ $companyName = "7/11 Philippines";
             </svg>
         </figure>
 
-        <div class="container position-relative">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="row align-items-center">
-                        <!-- Image -->
-                        <div class="col-6 col-md-3 text-center order-1">
-                            <img src="assets/images/element/category-1.svg" alt="">
-                        </div>
-
-                        <!-- Content -->
-                        <div class="col-md-6 px-md-5 align-items-center position-relative order-md-2 mb-5 mb-md-0">
-
-                            <!-- Svg decoration -->
-                            <figure class="position-absolute top-0 start-0">
-                                <svg width="22px" height="22px" viewBox="0 0 22 22">
-                                    <polygon class="fill-orange" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
-                                </svg>
-                            </figure>
-
-                            <!-- Title -->
-                            <h2 class="mb-3 font-weight-bold"><?php echo $companyName ?></h2>
-                        </div>
-                    </div>
-                    <!-- Row END -->
+        <div class="container py-3 position-relative">
+            <div class="d-flex w-100 align-items-center">
+                <div class="card company-img shadow-lg">
+                    <img src="uploads/training-programs/7-eleven.png" class="company-img" alt="company logo">
                 </div>
-                <div class="col-lg-6">
-                    <div class="card shadow-lg">
-                        <img src="uploads/training-programs/7-eleven.png" class="company-img" alt="company logo">
-                    </div>
+
+                <div class="ms-5 justify-content-center">
+                    <h2 class="font-weight-bold"><?php echo $companyName ?></h2>
+                    <p><span class="bi bi-geo-alt-fill text-danger me-2"></span><?php echo $location ?></p>
                 </div>
-            </div> <!-- Row END -->
+            </div>
         </div>
     </section>
+
     <!-- ======================= Main Banner END -->
 
     <!-- ======================= Main Content START -->
     <main>
         <section class="py-5">
+            <div class="container ">
+                <h3>Company Description</h3>
+                <p><?php echo $companyDesc ?></p>
+                <div class="card shadow my-5 p-4">
+                    <h4 class="mb-0">Company Training Programs</h4>
+                    <hr>
+                    <ul class="list-group">
+                        <!-- TODO: dunamically generate content -->
+                        <!-- list item 1 -->
+                        <a href="jobs-training-details.php" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Service Crew</h5>
+                                <span class="badge bg-primary">Registration open</span>
+                            </div>
+                            <p class="mb-1">Training program description. Lorem ipsum dolorem</p>
+                        </a>
 
+                        <!-- list item 2 -->
+                        <a href="jobs-training-details.php" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Truck Driver</h5>
+                                <span class="badge bg-warning">Training Ongoing</span>
+                            </div>
+                            <p class="mb-1">Training program description. Lorem ipsum dolorem</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
