@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                         <br>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary" name="upload">Update Record</button>
-                                            <button class="btn btn-info"><a href="displaydata.php" class="text-light"> Back </a></button>
+                                            <button class="btn btn-info"><a href="profile-edit.php" class="text-light"> Back </a></button>
                                         </div>
 
 

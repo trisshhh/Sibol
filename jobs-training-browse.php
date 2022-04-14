@@ -172,25 +172,13 @@ require_once 'utils/connection.php';
 														echo '
 														<div class="d-flex justify-content-between align-items-center">
 															<div class="form-check">
-																<input class="form-check-input" id="flexCheckDefault10" type="checkbox" value="'.$category.'" onclick="myFunction()">
+																<input class="form-check-input" id="flexCheckDefault10" type="checkbox" value="'.$category.'"">
 																<label class="form-check-label" for="flexCheckDefault10">'.$category.'</label>
 															</div>
 														</div>
-														<script>
-															function myFunction() {
-															var checkBox = document.getElementById("flexCheckDefault10");
-															if (checkBox.checked == true){
-																console.log("ETO:'.$category.'");
-															} else {
-																console.log("ETOss:'.$category.'");
-															}
-															}
-														</script>
-															<script>console.log("Debug Objects: '.$category.'");</script>
 														';
 													}
 												}
-												
 												?>
 										</div>
 									</div>
