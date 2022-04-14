@@ -6,10 +6,25 @@
 			$fname = $_POST['fname'];
 			$lname = $_POST['lname'];
 			$contact_no = $_POST['contact_no'];
+			$skills = $_POST['skills'];
 			$sql = "update trainees set fname='$fname', lname='$lname', email='$email', contact_no='$contact_no' where id=$id";
 			$result = mysqli_query($con, $sql);
 			if(empty($email) || empty($fname)) {
 				echo "<script type='text/javascript'>alert('You did not fill out the required field.'); window.location='displaydata.php'; </script>";
+			}
+			else if ($result) {
+				echo "<script type='text/javascript'>alert('Record Updated.');
+					window.location='displaydata.php';
+					</script>";
+			}
+			else {
+				die(mysqli_error($con));
+			}
+
+			$sql = "update skills set skills='$skills' where id=$id";
+			$result = mysqli_query($con, $sql);
+			if(empty($skills)) {
+				echo "<script type='text/javascript'>alert('You did not fill out the skills field.'); window.location='displaydata.php'; </script>";
 			}
 			else if ($result) {
 				echo "<script type='text/javascript'>alert('Record Updated.');
@@ -42,6 +57,13 @@
 				<input type="email" class="form-control" name="email" placeholder="Email">
 				<br>
 				<input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="+63 XXX XXX XXXX" value="+63">
+				<br>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Skills</span>
+					</div>
+					<textarea class="form-control" aria-label="With textarea" name="skills"></textarea>
+				</div>
 				<br>
 				<div class="text-center">
 					<button type="submit" class="btn btn-primary" name="upload">Update Record</button>
