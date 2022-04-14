@@ -11,7 +11,6 @@
                 <!-- Dashboard menu -->
                 <div class="list-group list-group-dark list-group-borderless">
                     <a class="list-group-item <?php if($page === "overview") echo 'active'; ?>" href="profile.php"><i class="bi bi-ui-checks-grid me-2"></i>Overview</a>
-                    <a class="list-group-item <?php if($page === "training") echo 'active'; ?>" href="profile-trainings.php"><i class="bi bi-file-earmark-text me-2"></i>Trainings and Jobs</a>
                     <a class="list-group-item <?php if($page === "edit") echo 'active'; ?>" href="profile-edit.php"><i class="bi bi-pencil-square me-2"></i>Edit Profile</a>
                     <a class="list-group-item <?php if($page === "delete") echo 'active'; ?>" href="profile-delete.php"><i class="bi bi-trash me-2"></i>Delete Profile</a>
                     <a class="list-group-item text-danger bg-danger-soft-hover" href="utils/signout.php">Sign Out</a>

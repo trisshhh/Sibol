@@ -52,8 +52,11 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                     </div>
                                 </div>
                                 <!-- Profile info -->
-                                <div class="col d-sm-flex justify-content-between align-items-center">
-                                    <h1 class="my-1 fs-4">Lori Ferguson</h1>
+                                <div class="col d-sm-flex justify-content-between align-items-end">
+                                    <div>
+                                        <h1 class="my-1 fs-4">Lori Ferguson</h1>
+                                        <p class="text-success">Employed</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +101,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                     <span class="display-6 lh-1 mb-0"><i class="bi bi-book"></i></span>
                                     <div class="ms-4">
                                         <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="9" data-purecounter-delay="200" data-purecounter-duration="0">9</h5>
+                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="1" data-purecounter-delay="200" data-purecounter-duration="0">1</h5>
                                         </div>
                                         <p class="mb-0 h6 fw-light">Total Training Programs</p>
                                     </div>
@@ -110,7 +113,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                     <span class="display-6 lh-1 mb-0"><i class="bi bi-clipboard-check"></i></span>
                                     <div class="ms-4">
                                         <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="52" data-purecounter-delay="200" data-purecounter-duration="0">52</h5>
+                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="1" data-purecounter-delay="200" data-purecounter-duration="0">1</h5>
                                         </div>
                                         <p class="mb-0 h6 fw-light">Completed Training Programs</p>
                                     </div>
@@ -119,10 +122,29 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                         </div>
                         <!-- Counter boxes END -->
 
+                        <!-- Card trainee details -->
+                        <div class="card border my-4 p-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5>Location</h5>
+                                    <!-- Google Map -->
+                                    <div id="map"></div>
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <h5>Skills</h5>
+                                    <div class="d-flex">
+                                        <div class="btn btn-outline-secondary m-2">Service</div>
+                                        <div class="btn btn-outline-secondary m-2">Retail</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card bg-transparent border rounded-3">
                             <!-- Card header START -->
                             <div class="card-header bg-transparent border-bottom">
-                                <h3 class="mb-0">My Training Programs</h3>
+                                <h3 class="mb-0">Training Programs</h3>
                             </div>
                             <!-- Card header END -->
 
@@ -135,11 +157,9 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                         <!-- Table head -->
                                         <thead>
                                             <tr>
-                                                <th scope="col" class="border-0 rounded-start">Course Title</th>
-                                                <th scope="col" class="border-0">Total Lectures</th>
-                                                <th scope="col" class="border-0">Completed Lecture</th>
-                                                <th scope="col" class="border-0 rounded-end">Action</th>
-                                            </tr>
+                                                <th scope="col" class="border-0 rounded-start">Program Title</th>
+                                                <th scope="col" class="border-0">Status</th>
+                                                <th scope="col" class="border-0">Hiring Status</th>
                                         </thead>
 
                                         <!-- Table body START -->
@@ -151,32 +171,23 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                                     <div class="d-flex align-items-center">
                                                         <!-- Image -->
                                                         <div class="w-100px">
-                                                            <img src="assets/images/courses/4by3/08.jpg" class="rounded" alt="">
+                                                            <img src="uploads/training-programs/7-eleven.png" class="rounded avatar" alt="">
                                                         </div>
                                                         <div class="mb-0 ms-2">
                                                             <!-- Title -->
-                                                            <h6><a href="#">7/11 Clerk Training</a></h6>
-                                                            <!-- Info -->
-                                                            <div class="overflow-hidden">
-                                                                <h6 class="mb-0 text-end">85%</h6>
-                                                                <div class="progress progress-sm bg-primary bg-opacity-10">
-                                                                    <div class="progress-bar bg-primary aos aos-init aos-animate" role="progressbar" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <h6><a href="jobs-training-details.php?">7/11 Clerk Training</a></h6>
                                                         </div>
                                                     </div>
                                                 </td>
 
                                                 <!-- Table data -->
-                                                <td>56</td>
-
-                                                <!-- Table data -->
-                                                <td>40</td>
+                                                <td>
+                                                    <div class="badge bg-success">Graduated</div>
+                                                </td>
 
                                                 <!-- Table data -->
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"><i class="bi bi-play-circle me-1"></i>Continue</a>
+                                                    <div class="badge bg-success">Hired</div>
                                                 </td>
                                             </tr>
 
@@ -207,14 +218,25 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
 
     <!-- Vendor Files -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="vendor/purecounter/purecounter.js"></script>
+    <script>
+        new PureCounter();
+    </script>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_CLOUD_KEY ?>&callback=initMap" async></script>
+
 
     <!-- user scripts -->
     <script src="js/scrollTop.js"></script>
+    <script src="js/map.js"></script>
     <script>
         AOS.init({
             once: true
         });
     </script>
+
+
 </body>
 
 </html>

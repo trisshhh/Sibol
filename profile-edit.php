@@ -8,15 +8,43 @@ require("vendor/autoload.php");
 $accountType = "trainee";
 $userName = "Lori Ferguson";
 
-$imageUploader = new ImageUploader();
+if (isset($_SESSION['user']))
+    $id = $_GET['userID'];
+else
+    $id = "1";
 
-// Compulsory
-$imageUploader->setPath("uploads/users/");   // The directory where images will be uploaded
 
-// The rest are optional
-$imageUploader->setSalt("my_application_specific_salt");  // It is used while hashing image names
-$imageUploader->setMinFileSize(0);                           // Set minimum file size in bytes
-$imageUploader->setMaxFileSize(100000);                      // Set maximum file size in bytes
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $email = $_POST['email'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $contact_no = $_POST['contact_no'];
+    $skills = $_POST['skills'];
+    $sql = "update trainees set fname='$fname', lname='$lname', email='$email', contact_no='$contact_no' where id=$id";
+    $result = mysqli_query($con, $sql);
+    if (empty($email) || empty($fname)) {
+        echo "<script type='text/javascript'>alert('You did not fill out the required field.'); window.location='displaydata.php'; </script>";
+    } else if ($result) {
+        echo "<script type='text/javascript'>alert('Record Updated.');
+					window.location='displaydata.php';
+					</script>";
+    } else {
+        die(mysqli_error($con));
+    }
+
+    $sql = "update skills set skills='$skills' where id=$id";
+    $result = mysqli_query($con, $sql);
+    if (empty($skills)) {
+        echo "<script type='text/javascript'>alert('You did not fill out the skills field.'); window.location='displaydata.php'; </script>";
+    } else if ($result) {
+        echo "<script type='text/javascript'>alert('Record Updated.');
+					window.location='displaydata.php';
+					</script>";
+    } else {
+        die(mysqli_error($con));
+    }
+}
+
 
 ?>
 
@@ -86,103 +114,62 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                     <!-- Main content START -->
                     <div class="col-xl-9">
 
-                        <!-- Counter boxes START -->
-                        <div class="row mb-4">
-                            <!-- Counter item -->
-                            <div class="col-sm-6 col-lg-6 mb-3 mb-lg-0">
-                                <div class="d-flex justify-content-center align-items-center p-4 bg-primary-light bg-opacity-15 rounded-3">
-                                    <span class="display-6 lh-1 mb-0"><i class="bi bi-book"></i></span>
-                                    <div class="ms-4">
-                                        <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="9" data-purecounter-delay="200" data-purecounter-duration="0">9</h5>
-                                        </div>
-                                        <p class="mb-0 h6 fw-light">Total Training Programs</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Counter item -->
-                            <div class="col-sm-6 col-lg-6 mb-3 mb-lg-0">
-                                <div class="d-flex justify-content-center align-items-center p-4 bg-primary-light bg-opacity-15 rounded-3">
-                                    <span class="display-6 lh-1 mb-0"><i class="bi bi-clipboard-check"></i></span>
-                                    <div class="ms-4">
-                                        <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="52" data-purecounter-delay="200" data-purecounter-duration="0">52</h5>
-                                        </div>
-                                        <p class="mb-0 h6 fw-light">Completed Training Programs</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Counter boxes END -->
-
                         <div class="card bg-transparent border rounded-3">
                             <!-- Card header START -->
                             <div class="card-header bg-transparent border-bottom">
-                                <h3 class="mb-0">My Training Programs</h3>
+                                <h3 class="mb-0">Edit Profile</h3>
                             </div>
                             <!-- Card header END -->
 
                             <!-- Card body START -->
                             <div class="card-body">
+                                <form method="post" action="" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-floating" style="color: #3d3d44 !important">
+                                                    <input type="text" class="form-control" id="fname" name="fname" placeholder="qwerty">
+                                                    <label for="floatingInput">First name</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-floating" style="color: #3d3d44 !important">
+                                                    <input type="text" class="form-control" id="lname" name="lname" placeholder="qwerty">
+                                                    <label for="floatingInput">Last name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Email input -->
+                                        <div class="form-floating mb-4" style="color: #3d3d44 !important">
+                                            <input type="email" class="form-control" id="asd" name="email" placeholder="name@example.com">
+                                            <label for="asd">Email Address</label>
+                                        </div>
 
-                                <!-- Course list table START -->
-                                <div class="table-responsive border-0">
-                                    <table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
-                                        <!-- Table head -->
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="border-0 rounded-start">Course Title</th>
-                                                <th scope="col" class="border-0">Total Lectures</th>
-                                                <th scope="col" class="border-0">Completed Lecture</th>
-                                                <th scope="col" class="border-0 rounded-end">Action</th>
-                                            </tr>
-                                        </thead>
+                                        <!-- Phone number input -->
+                                        <div class="form-floating mb-4" style="color: #3d3d44 !important">
+                                            <input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="+63 XXX XXX XXXX" value="+63">
+                                            <label for="floatingInput">Phone Number (+63XXXXXXXXXX)</label>
+                                        </div>
 
-                                        <!-- Table body START -->
-                                        <tbody>
-                                            <!-- Table item -->
-                                            <tr>
-                                                <!-- Table data -->
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <!-- Image -->
-                                                        <div class="w-100px">
-                                                            <img src="assets/images/courses/4by3/08.jpg" class="rounded" alt="">
-                                                        </div>
-                                                        <div class="mb-0 ms-2">
-                                                            <!-- Title -->
-                                                            <h6><a href="#">7/11 Clerk Training</a></h6>
-                                                            <!-- Info -->
-                                                            <div class="overflow-hidden">
-                                                                <h6 class="mb-0 text-end">85%</h6>
-                                                                <div class="progress progress-sm bg-primary bg-opacity-10">
-                                                                    <div class="progress-bar bg-primary aos aos-init aos-animate" role="progressbar" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                        <div class="input-group mb-4">
+                                            <span class="input-group-text">Skills</span>
+                                            <textarea class="form-control" name="skills"></textarea>
+                                        </div>
 
-                                                <!-- Table data -->
-                                                <td>56</td>
+                                        <label for="">Location: </label>
+                                        <!-- Google Map -->
+                                        <div id="map"></div>
 
-                                                <!-- Table data -->
-                                                <td>40</td>
-
-                                                <!-- Table data -->
-                                                <td>
-                                                    <a href="#" class="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"><i class="bi bi-play-circle me-1"></i>Continue</a>
-                                                </td>
-                                            </tr>
+                                        <br>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary" name="upload">Update Record</button>
+                                            <button class="btn btn-info"><a href="displaydata.php" class="text-light"> Back </a></button>
+                                        </div>
 
 
-                                        </tbody>
-                                        <!-- Table body END -->
-                                    </table>
-                                </div>
-                                <!-- Course list table END -->
-
+                                    </div>
+                                </form>
                             </div>
                             <!-- Card body START -->
                         </div>
