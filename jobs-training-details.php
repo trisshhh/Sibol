@@ -2,7 +2,7 @@
 require_once 'common/components.php';
 
 //TODO: change later dynamically updates
-$trainingProgramName = "Service Crew";
+$trainingProgramName = "Mechanic";
 $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
 
 ?>
@@ -43,7 +43,7 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
                             <h1 class="mb-3 font-weight-bold"><?php echo $trainingProgramName ?></h1>
 
                             <!-- Company -->
-                            <a href="company-details.php" class="fw-bold">7/11 Philippines</a>
+                            <a href="company-details.php" class="fw-bold">Bowheels</a>
                         </div>
                     </div>
                     <!-- Row END -->
@@ -84,7 +84,7 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
                             <!-- Program Key Learnings-->
                             <h4>What You'll Learn</h4>
                             <ul>
-                                <li>Introduction to 7/11 stores.</li>
+                                <li>Introduction to car service stores.</li>
                                 <li>Management of inventory.</li>
                                 <li>Stocking and organizing</li>
                             </ul>

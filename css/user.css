@@ -218,7 +218,7 @@ img {
 } */
 
 .company-img {
-  height: 12rem;
+  height: 16rem;
   width: 24rem;
   object-fit: cover;
 }

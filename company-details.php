@@ -2,9 +2,9 @@
 require_once 'common/components.php';
 
 //TODO: work on this later, when details are dynamically generated
-$companyName = "7/11 Philippines";
+$companyName = "Bowheels";
 $location = "Manila Philippines";
-$companyDesc = "7/11 is the leading convenience store chain in the Philippines.";
+$companyDesc = "Bowheels is the leading car service store chain in the Philippines.";
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $companyDesc = "7/11 is the leading convenience store chain in the Philippines."
         <div class="container py-3 position-relative">
             <div class="d-flex w-100 align-items-center">
                 <div class="card company-img shadow-lg">
-                    <img src="uploads/training-programs/7-eleven.png" class="company-img" alt="company logo">
+                    <img src="uploads/companies/logo-1.png" class="company-img" alt="company logo">
                 </div>
 
                 <div class="ms-5 justify-content-center">

@@ -127,7 +127,7 @@ require_once 'common/components.php';
                                     <span class="bi bi-check"></span>
                                 </div>
                                 <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-                                    <h5 class="mb-0">Guaranteed jobs for the youth</h5>
+                                    <h5 class="mb-0">Streamlined guaranteed jobs for the youth</h5>
                                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ullamcorper nulla.</p>
                                 </div>
                             </li>
@@ -137,7 +137,7 @@ require_once 'common/components.php';
                                     <span class="bi bi-check"></span>
                                 </div>
                                 <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-                                    <h5 class="mb-0">Lorem ipsum dolorem</h5>
+                                    <h5 class="mb-0">Monitor progress</h5>
                                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ullamcorper nulla. </p>
                                 </div>
                             </li>

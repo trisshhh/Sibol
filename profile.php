@@ -12,16 +12,6 @@ $accountType = "trainee";
 $userName = "Lori Ferguson";
 
 
-$imageUploader = new ImageUploader();
-
-// Compulsory
-$imageUploader->setPath("uploads/users/");   // The directory where images will be uploaded
-
-// The rest are optional
-$imageUploader->setSalt("my_application_specific_salt");  // It is used while hashing image names
-$imageUploader->setMinFileSize(0);                           // Set minimum file size in bytes
-$imageUploader->setMaxFileSize(100000);                      // Set maximum file size in bytes
-
 ?>
 
 
@@ -173,11 +163,11 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                                     <div class="d-flex align-items-center">
                                                         <!-- Image -->
                                                         <div class="w-100px">
-                                                            <img src="uploads/training-programs/7-eleven.png" class="rounded avatar" alt="">
+                                                            <img src="uploads/training-programs/logo-2.png" class="rounded avatar" alt="">
                                                         </div>
                                                         <div class="mb-0 ms-2">
                                                             <!-- Title -->
-                                                            <h6><a href="jobs-training-details.php?">7/11 Clerk Training</a></h6>
+                                                            <h6><a href="jobs-training-details.php?">Company 1 Store Cashier</a></h6>
                                                         </div>
                                                     </div>
                                                 </td>
