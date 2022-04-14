@@ -54,45 +54,86 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
     <!-- ======================= Main Banner END -->
 
     <!-- ======================= Main Content START -->
+
+
     <main>
         <section class="py-5">
             <div class="container">
-                <div class="card shadow-lg p-5">
-                    <div class="row gy-3 mb-3">
-                        <!-- Slots column -->
-                        <div class="col-lg-4">
-                            <div class="card p-3 bg-light text-center shadow mb-3">
-                                <span class="bi bi-people"></span>
-                                <p class="fw-bold">Slots</p>
-                                <p class="display-6">7/10</p>
-                                <p class="small">Details about the training program will be sent to registered trainees once the slots have been filled.</p>
-                            </div>
-                            <button class="btn btn-primary w-100">Register</button>
-                        </div>
-                        <!-- Details column -->
-                        <div class="col-lg-8">
-                            <!-- Program description -->
-                            <h4>Description</h4>
-                            <p class="mb-3"><?php echo $trainingProgramDesc ?></p>
-                            
-                            <!-- Program Key Learnings-->
-                            <h4>What You'll Learn</h4>
-                            <ul>
-                                <li>Introduction to 7/11 stores.</li>
-                                <li>Management of inventory.</li>
-                                <li>Stocking and organizing</li>
-                            </ul>
+                <div class="card p-5 shadow-lg">
+                    <div class="row">
+                        <div class=" col-6 mb-4 justify-content-center align-items-center">
+                            <div class="card p-4 bg-primary-light ">
+                                <div class="mb-3 d-flex justify-content-between align-items-center">
+                                    <div class="">
+                                        <h4>7/11 Service Crew</h4>
+                                        <p class="small">Training Program</p>
+                                    </div>
+                                    <div class="list-group w-50">
+                                        <div class="list-group-item">
+                                            <h4 class="">Php 500</h4>
+                                            <p class="small">Total</p>
+                                        </div>
+                                        <div class="list-group-item bg-light">
+                                            <h6 class=""> - Php 300</h6>
+                                            <p class="small">Discount</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="color:green">
 
-                            <!-- Tags -->
-                            <h4>Tags and Skills</h4>
-                            <div class="d-flex">
-                                <div class="btn btn-outline-secondary m-2">Service</div>
-                                <div class="btn btn-outline-secondary m-2">Retail</div>
+                                <h3 class="text-primary fw-bold">Php 200</h3>
+                                <p class="small">Total</p>
+
                             </div>
+                            <form class="card p-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Scholarship Code" value="East-Village-50-OFF">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-secondary">Redeem</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="mb-3">Payment</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="cc-name">Name on card</label>
+                                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                    <small class="text-muted">Full name as displayed on card</small>
+                                    <div class="invalid-feedback">
+                                        Name on card is required
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cc-number">Credit card number</label>
+                                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Credit card number is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-expiration">Expiration</label>
+                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Expiration date required
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-expiration">CVV</label>
+                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Security code required
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Pay and Register</button>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
 
