@@ -48,12 +48,13 @@
 			<th scope="col">Last name</th>
 			<th scope="col">Email</th>
 			<th scope="col">Contact No.</th>
+			<th scope="col">Skills</th>
 			<th scope="col">Controls</th>
 			</tr>
 		</thead>
 		<tbody>
 		<?php
-			$sql = "select * from trainees;";
+			$sql = "select a.id, a.email, a.fname, a.lname, a.contact_no, b.skills from trainees AS a inner join skills AS b on a.id = b.id;";
 			$result = mysqli_query($con, $sql);
 			if($result) {
 				while ($row = mysqli_fetch_assoc($result)) {
@@ -62,6 +63,7 @@
 					$fname = $row['fname'];
 					$lname = $row['lname'];
 					$contact_no = $row['contact_no'];
+					$skills = $row['skills'];
 					echo '
 					<tr>
 						<th scope="row">'.$id.'</th>
@@ -69,6 +71,7 @@
 						<td>'.$lname.'</td>
 						<td>'.$email.'</td>
 						<td>'.$contact_no.'</td>
+						<td>'.$skills.'</td>
 						<td>
 							<button class="btn btn-primary"><a href="update-trainee-data.php?updateid='.$id.'" class="text-light"> Update </a></button>
 						</td>
