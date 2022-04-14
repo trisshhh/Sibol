@@ -1,1 +1,3 @@
-# sibol-training
+# Sibol: Training and Placement
+
+
