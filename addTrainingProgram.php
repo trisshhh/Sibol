@@ -9,8 +9,9 @@
 		$instructor = $_POST['instructor'];
 		$filename = $_FILES["choosefile"]["name"];
 		$tempname = $_FILES["choosefile"]["tmp_name"];
+		$category = $_POST['category'];
 		$folder = "uploads/training-programs/".$filename;
-		$sql = "insert into training_programs (id, company_name, program_name, description, ratings, lecture, Hours, instructor, Photo) values ('default', '$company_name', '$program_name', '$description', 5.0, '$lecture', '$hours', '$instructor', '$filename')";
+		$sql = "insert into training_programs (id, company_name, program_name, description, ratings, lecture, Hours, instructor, Photo, category) values ('default', '$company_name', '$program_name', '$description', 5.0, '$lecture', '$hours', '$instructor', '$filename', '$category')";
 		$result = mysqli_query($con, $sql);
 		if(empty($program_name)) {
 			echo "<script type='text/javascript'>alert('You did not fill out the required field.'); window.location='#'; </script>";
@@ -59,6 +60,8 @@
 				<input type="number" class="form-control" name="hours" placeholder="No. of Hours">
 				<br>
 				<input type="text" class="form-control" name="instructor" placeholder="Instructor">
+				<br>
+				<input type="text" class="form-control" name="category" placeholder="Category">
 				<br>
 				<label for="formFileSm" class="form-label">Upload Photo</label>
 				<input class="form-control form-control-sm" type="file" name="choosefile" value="" />
