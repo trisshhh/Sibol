@@ -2,8 +2,11 @@
 require_once 'utils/connection.php';
 include 'config/constants.php';
 require_once 'common/components.php';
-
 require("vendor/autoload.php");
+
+if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'community') {
+    header('location: community-profile.php');
+}
 
 $accountType = "trainee";
 $userName = "Lori Ferguson";
