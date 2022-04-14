@@ -104,6 +104,8 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
 
     <!-- ======================= Main Content END -->
 
+    
+
 
     <!-- ======================= Footer START -->
     <?= footer() ?>
