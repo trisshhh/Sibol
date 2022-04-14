@@ -13,9 +13,29 @@
                     <a class="list-group-item <?php if($page === "overview") echo 'active'; ?>" href="profile.php"><i class="bi bi-ui-checks-grid me-2"></i>Overview</a>
                     <a class="list-group-item <?php if($page === "edit") echo 'active'; ?>" href="profile-edit.php"><i class="bi bi-pencil-square me-2"></i>Edit Profile</a>
                     <a class="list-group-item <?php if($page === "delete") echo 'active'; ?>" href="profile-delete.php"><i class="bi bi-trash me-2"></i>Delete Profile</a>
-                    <a class="list-group-item text-danger bg-danger-soft-hover" href="utils/signout.php">Sign Out</a>
+                    <a class="list-group-item text-danger bg-danger-soft-hover" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Sign Out</a>
                 </div>
             </div>
         </div>
     </div>
 </nav>
+
+<div class="float-center">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel" style="color:black">Sign out</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="color:black">
+                    Are you sure you want to log out?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color:white">No</button>
+                    <button type="submit" class="btn btn-danger" style="color:white"><a href="utils/signout.php" style="color:white">Yes</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
