@@ -130,7 +130,27 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
                                 </div>
                             </div>
                             <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Pay and Register</button>
+                            <button class="btn btn-primary btn-lg btn-block" href="#" data-bs-toggle="modal" data-bs-target="#paymentSuccess" type="submit">Pay and Register</button>
+
+                            <!-- ======================= Payment success modal -->
+                            <div class="float-center">
+                                <div class="modal fade" id="paymentSuccess" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Success</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" style="color:black">
+                                                You have successfully registered for this training program!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a type="submit" class="btn btn-success" href="profile.php">Okay</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

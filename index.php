@@ -90,7 +90,7 @@ require_once 'common/components.php';
                     <!-- Category item -->
                     <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="fade-up">
                         <div class="card card-body shadow h-100 p-4">
-                            <h5 class="text-primary">Direct recruitment</h5>
+                            <h5 class="text-primary">Training</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ require_once 'common/components.php';
                     <!-- Category item -->
                     <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="fade-up">
                         <div class="card card-body shadow h-100 p-4">
-                            <h5 class="text-primary">Direct recruitment</h5>
+                            <h5 class="text-primary">Build reputation</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </div>
