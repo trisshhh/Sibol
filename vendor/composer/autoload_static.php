@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInite785fa2537425480d60d4416e3c413b6
 {
+    public static $files = array (
+        '89c5c8c5396a3a1f7402830cd218dcc2' => __DIR__ . '/..' . '/dhaval/image-uploader/src/ImageUploader.php',
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );

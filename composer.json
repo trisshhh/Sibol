@@ -1,3 +1,6 @@
 {
     
+  "require": {
+    "dhaval/image-uploader": "dev-master"
+  }
 }

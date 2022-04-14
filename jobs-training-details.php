@@ -67,8 +67,9 @@ $trainingProgramDesc = "Training program description. Lorem ipsum dolorem";
                                 <p class="display-6">7/10</p>
                                 <p class="small">Details about the training program will be sent to registered trainees once the slots have been filled.</p>
                             </div>
-                            <button class="btn btn-primary w-100">Register</button>
+                            <a class="btn btn-primary w-100" href="jobs-training-register.php">Register</a>
                         </div>
+
                         <!-- Details column -->
                         <div class="col-lg-8">
                             <!-- Program description -->

@@ -21,7 +21,6 @@ require_once 'common/components.php';
         <section class="position-relative overflow-hidden mt-5 pt-5 pt-lg-3">
             <!-- Content START -->
             <div class="container">
-                <!-- Title -->
                 <div class="row align-items-center g-5">
                     <!-- Left content START -->
                     <div class="col-lg-5 col-xl-6 position-relative z-index- text-lg-start mb-5 mb-sm-0">
@@ -50,7 +49,6 @@ require_once 'common/components.php';
 
                         <div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start">
                             <!-- Button -->
-                            <!-- TODO: fix folder sructure -->
                             <a href="signup-trainee.php" class="btn btn-lg btn-primary me-2 mb-4 mb-sm-0">Get Started</a>
                         </div>
                     </div>
