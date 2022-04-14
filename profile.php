@@ -32,7 +32,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
         <!-- ====================== Page Banner START -->
         <section class="pt-0">
             <div class="container-fluid px-0">
-                <div class="bg-primary h-100px" style="height:200px; background:url(img/04.png) no-repeat center center; background-size:cover;">
+                <div class="bg-primary" style="height:150px; background:url(img/04.png) no-repeat center center; background-size:cover;">
                 </div>
             </div>
 
@@ -110,38 +110,26 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                         <!-- Counter boxes START -->
                         <div class="row mb-4">
                             <!-- Counter item -->
-                            <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                <div class="d-flex justify-content-center align-items-center p-4 bg-orange bg-opacity-15 rounded-3">
-                                    <span class="display-6 lh-1 text-orange mb-0"><i class="fas fa-tv fa-fw"></i></span>
+                            <div class="col-sm-6 col-lg-6 mb-3 mb-lg-0">
+                                <div class="d-flex justify-content-center align-items-center p-4 bg-primary-light bg-opacity-15 rounded-3">
+                                    <span class="display-6 lh-1 mb-0"><i class="bi bi-book"></i></span>
                                     <div class="ms-4">
                                         <div class="d-flex">
                                             <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="9" data-purecounter-delay="200" data-purecounter-duration="0">9</h5>
                                         </div>
-                                        <p class="mb-0 h6 fw-light">Total Courses</p>
+                                        <p class="mb-0 h6 fw-light">Total Training Programs</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Counter item -->
-                            <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                <div class="d-flex justify-content-center align-items-center p-4 bg-purple bg-opacity-15 rounded-3">
-                                    <span class="display-6 lh-1 text-purple mb-0"><i class="fas fa-clipboard-check fa-fw"></i></span>
+                            <div class="col-sm-6 col-lg-6 mb-3 mb-lg-0">
+                                <div class="d-flex justify-content-center align-items-center p-4 bg-primary-light bg-opacity-15 rounded-3">
+                                    <span class="display-6 lh-1 mb-0"><i class="bi bi-clipboard-check"></i></span>
                                     <div class="ms-4">
                                         <div class="d-flex">
                                             <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="52" data-purecounter-delay="200" data-purecounter-duration="0">52</h5>
                                         </div>
-                                        <p class="mb-0 h6 fw-light">Complete lessons</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Counter item -->
-                            <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                                <div class="d-flex justify-content-center align-items-center p-4 bg-success bg-opacity-10 rounded-3">
-                                    <span class="display-6 lh-1 text-success mb-0"><i class="fas fa-medal fa-fw"></i></span>
-                                    <div class="ms-4">
-                                        <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="8" data-purecounter-delay="300" data-purecounter-duration="0">8</h5>
-                                        </div>
-                                        <p class="mb-0 h6 fw-light">Achieved Certificates</p>
+                                        <p class="mb-0 h6 fw-light">Completed Training Programs</p>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +139,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                         <div class="card bg-transparent border rounded-3">
                             <!-- Card header START -->
                             <div class="card-header bg-transparent border-bottom">
-                                <h3 class="mb-0">My Courses List</h3>
+                                <h3 class="mb-0">My Training Programs</h3>
                             </div>
                             <!-- Card header END -->
 
@@ -184,7 +172,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                                         </div>
                                                         <div class="mb-0 ms-2">
                                                             <!-- Title -->
-                                                            <h6><a href="#">Building Scalable APIs with GraphQL</a></h6>
+                                                            <h6><a href="#">7/11 Clerk Training</a></h6>
                                                             <!-- Info -->
                                                             <div class="overflow-hidden">
                                                                 <h6 class="mb-0 text-end">85%</h6>
