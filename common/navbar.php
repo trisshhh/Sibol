@@ -51,7 +51,7 @@
                             <!-- Avatar -->
                             <div class="avatar me-3">
                                 <img class="avatar-img rounded-circle shadow" src="uploads/users/worker-blue.webp" alt="avatar">
-                            </div>
+                            </div>  
                             <div>
                                 <p class="h6">Lori Ferguson</p>
                                 <p class="small m-0">example@gmail.com</p>

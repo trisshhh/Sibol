@@ -8,16 +8,6 @@ require("vendor/autoload.php");
 $accountType = "trainee";
 $userName = "Lori Ferguson";
 
-$imageUploader = new ImageUploader();
-
-// Compulsory
-$imageUploader->setPath("uploads/users/");   // The directory where images will be uploaded
-
-// The rest are optional
-$imageUploader->setSalt("my_application_specific_salt");  // It is used while hashing image names
-$imageUploader->setMinFileSize(0);                           // Set minimum file size in bytes
-$imageUploader->setMaxFileSize(100000);                      // Set maximum file size in bytes
-
 ?>
 
 <!DOCTYPE html>

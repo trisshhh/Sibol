@@ -67,10 +67,10 @@ require_once 'common/components.php';
                         <div class="col-sm-6 col-xl-4">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="uploads/training-programs/7-eleven.webp" class="card-img-top" alt="course image">
+                                <img src="uploads/companies/logo-1.png" class="card-img-top" alt="course image">
                                 <!-- Card body -->
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="company-details.php" class="stretched-link">7/11 Philippines</a></h5>
+                                    <h5 class="card-title"><a href="company-details.php" class="stretched-link">Bowheels</a></h5>
                                     <p class="small">Manila, Philippines</p>
                                 </div>
                             </div>
