@@ -2,6 +2,7 @@
 include("utils/connection.php");
 include 'config/constants.php';
 require_once("common/components.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ require_once("common/components.php");
 <body>
 	<?= scrollToTopBtn(); ?>
 	<?= navbarMinimal() ?>
-	
+
 	<!-- Section: Design Block -->
 	<section class="">
 		<!-- Jumbotron -->
@@ -49,6 +50,13 @@ require_once("common/components.php");
 										<input type="email" class="form-control" id="asd" name="email_Add" placeholder="name@example.com">
 										<label for="asd">Email Address</label>
 									</div>
+
+									<!-- Community input -->
+									<select name="community" class="form-select py-3 mb-4" style="color: #3d3d44 !important">
+										<option value="">Community</option>
+										<option value="">None</option>
+										//TODO: populate communities
+									</select>
 
 									<!-- Password input -->
 									<div class="form-floating mb-4" style="color: #3d3d44 !important">

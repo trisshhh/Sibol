@@ -79,6 +79,7 @@ require_once 'utils/connection.php';
 						$result = mysqli_query($con, $sql);
 						if ($result) {
 							while ($row = mysqli_fetch_assoc($result)) {
+								$id = $row['id'];
 								$company_name = $row['company_name'];
 								$program_name = $row['program_name'];
 								$description = $row['description'];
@@ -94,11 +95,11 @@ require_once 'utils/connection.php';
 										<div class="card-body">
 											<!-- Badge and favorite -->
 											<div class="d-flex justify-content-between mb-2">
-												<a href="#" class="badge bg-warning bg-opacity-10 text-light">' . $category . '</a>
-												<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+												<a href="jobs-training-browse.php?'.$category.'" class="badge bg-warning bg-opacity-10 text-light">' . $category . '</a>
+												<a href="#" class="h6 fw-light mb-0"><i class="bi bi-star"></i></a>
 											</div>
 											<!-- Title -->
-											<h5 class="card-title"><a href="jobs-training-details.php">' . $program_name . '</a></h5>
+											<h5 class="card-title"><a href="jobs-training-details.php?'.$id.'">' . $program_name . '</a></h5>
 											<p class="small">' . $company_name . '</p>
 											<p class="mb-2 text-truncate-2">' . $description . '</p>
 										</div>
