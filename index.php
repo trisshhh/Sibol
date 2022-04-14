@@ -179,7 +179,4 @@ require_once 'common/components.php';
     <!-- ======================= Scripts START -->
     <?= include 'common/scripts.php' ?>
     <!-- ======================= Scripts END -->
-
-
-
 </html>
