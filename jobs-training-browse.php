@@ -74,7 +74,6 @@ require_once 'utils/connection.php';
 					<!-- Course Grid START -->
 					<div class="row g-4">
 						<?php
-						//training_programs (id, program_name, description, ratings, lecture, Hours, instructor) 
 						$sql = "select * from training_programs;";
 						$result = mysqli_query($con, $sql);
 						if ($result) {
@@ -83,7 +82,7 @@ require_once 'utils/connection.php';
 								$company_name = $row['company_name'];
 								$program_name = $row['program_name'];
 								$description = $row['description'];
-								$category = "Customer Service";
+								$category = $row['category'];
 								$Hours = $row['Hours'];
 								$Photo = $row["Photo"];
 								echo '<!-- Card item START -->
@@ -158,65 +157,48 @@ require_once 'utils/connection.php';
 												</div>
 											</div>
 											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
-													<label class="form-check-label" for="flexCheckDefault10">Customer Service</label>
-												</div>
-											</div>
-											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
-													<label class="form-check-label" for="flexCheckDefault11">Construction</label>
-												</div>
-											</div>
-											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
-													<label class="form-check-label" for="flexCheckDefault12">IT</label>
-												</div>
-											</div>
-											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17">
-													<label class="form-check-label" for="flexCheckDefault17">Data Entry</label>
-												</div>
-											</div>
-											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13">
-													<label class="form-check-label" for="flexCheckDefault13">Security</label>
-												</div>
-											</div>
-											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14">
-													<label class="form-check-label" for="flexCheckDefault14">Legal</label>
-												</div>
-											</div>
-											<!-- Checkbox -->
-											<div class="d-flex justify-content-between align-items-center">
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15">
-													<label class="form-check-label" for="flexCheckDefault15">Photography</label>
-												</div>
-											</div>
+											<?php
+												//training_programs (id, program_name, description, ratings, lecture, Hours, instructor) 
+												$sql = "select * from training_programs ORDER BY category ASC;";
+												$result = mysqli_query($con, $sql);
+												if ($result) {
+													while ($row = mysqli_fetch_assoc($result)) {
+														$category = $row['category'];
+														echo '
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="form-check">
+																<input class="form-check-input" id="flexCheckDefault10" type="checkbox" value="'.$category.'" onclick="myFunction()">
+																<label class="form-check-label" for="flexCheckDefault10">'.$category.'</label>
+															</div>
+														</div>
+														<script>
+															function myFunction() {
+															var checkBox = document.getElementById("flexCheckDefault10");
+															if (checkBox.checked == true){
+																console.log("ETO:'.$category.'");
+															} else {
+																console.log("ETOss:'.$category.'");
+															}
+															}
+														</script>
+															<script>console.log("Debug Objects: '.$category.'");</script>
+														';
+													}
+													
+													echo'<div class="d-grid p-2 p-lg-0 text-center"> 
+															<button class="btn btn-primary mb-0" onclick="window.location.href=">Filter Results</button>
+														</div>';
+												}
+												
+												?>
 										</div>
 									</div>
 									<!-- Category END -->
-
-								</form><!-- Form End -->
+									<!-- <a href="update-trainee-data.php?updateid='.$id.'" class="text-light"> Update </a> -->
+								</form>
+								<!-- Form End -->
 							</div>
-
 							<!-- Button -->
-							<div class="d-grid p-2 p-lg-0 text-center">
-								<button class="btn btn-primary mb-0">Filter Results</button>
-							</div>
 
 						</div>
 					</nav>
