@@ -74,7 +74,12 @@ require_once 'utils/connection.php';
 					<!-- Course Grid START -->
 					<div class="row g-4">
 						<?php
-						$sql = "select * from training_programs;";
+						if(isset($_GET["category"]) == "Customer Service") {
+							$sql = "select * from training_programs where category='Customer Service';";
+						}
+						else {
+							$sql = "select * from training_programs;";
+						}
 						$result = mysqli_query($con, $sql);
 						if ($result) {
 							while ($row = mysqli_fetch_assoc($result)) {
@@ -184,22 +189,19 @@ require_once 'utils/connection.php';
 															<script>console.log("Debug Objects: '.$category.'");</script>
 														';
 													}
-													
-													echo'<div class="d-grid p-2 p-lg-0 text-center"> 
-															<button class="btn btn-primary mb-0" onclick="window.location.href=">Filter Results</button>
-														</div>';
 												}
 												
 												?>
 										</div>
 									</div>
 									<!-- Category END -->
-									<!-- <a href="update-trainee-data.php?updateid='.$id.'" class="text-light"> Update </a> -->
 								</form>
 								<!-- Form End -->
 							</div>
 							<!-- Button -->
-
+							<div class="d-grid p-2 p-lg-0 text-center"> 
+								<button class="btn btn-primary mb-0" onclick="window.location.href='jobs-training-browse.php?category=Customer Service'" type="submit">Filter Results</button>
+							</div>
 						</div>
 					</nav>
 					<!-- Responsive offcanvas body END -->
