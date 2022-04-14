@@ -101,7 +101,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                     <span class="display-6 lh-1 mb-0"><i class="bi bi-book"></i></span>
                                     <div class="ms-4">
                                         <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="9" data-purecounter-delay="200" data-purecounter-duration="0">1</h5>
+                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="1" data-purecounter-delay="200" data-purecounter-duration="0">1</h5>
                                         </div>
                                         <p class="mb-0 h6 fw-light">Total Training Programs</p>
                                     </div>
@@ -113,7 +113,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                     <span class="display-6 lh-1 mb-0"><i class="bi bi-clipboard-check"></i></span>
                                     <div class="ms-4">
                                         <div class="d-flex">
-                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="52" data-purecounter-delay="200" data-purecounter-duration="0">1</h5>
+                                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="1" data-purecounter-delay="200" data-purecounter-duration="0">1</h5>
                                         </div>
                                         <p class="mb-0 h6 fw-light">Completed Training Programs</p>
                                     </div>
@@ -127,9 +127,9 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                             <div class="row">
                                 <div class="col-lg-6">
                                     <h5>Location</h5>
+                                    <!-- Google Map -->
                                     <div id="map"></div>
 
-                                    
                                 </div>
                                 <div class="col-lg-6">
                                     <h5>Skills</h5>
@@ -218,17 +218,25 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
 
     <!-- Vendor Files -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    
+    <script src="vendor/purecounter/purecounter.js"></script>
+    <script>
+        new PureCounter();
+    </script>
+
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_CLOUD_KEY ?>&callback=initMap&v=weekly" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_CLOUD_KEY ?>&callback=initMap" async></script>
+
 
     <!-- user scripts -->
     <script src="js/scrollTop.js"></script>
+    <script src="js/map.js"></script>
     <script>
         AOS.init({
             once: true
         });
     </script>
+
+
 </body>
 
 </html>
