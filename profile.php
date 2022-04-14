@@ -24,6 +24,7 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <?= head("Profile") ?>
