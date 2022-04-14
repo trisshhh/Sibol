@@ -129,7 +129,8 @@ $imageUploader->setMaxFileSize(100000);                      // Set maximum file
                                 <div class="col-lg-6">
                                     <h5>Location</h5>
                                     <!-- Google Map -->
-                                    <div id="map"></div>
+                                    <!-- <div id="map"></div> -->
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.3541917243363!2d121.01198942919787!3d14.57530549730876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9bd33c5e7e1%3A0x2a5121c941fdcde0!2s1007%20Del%20Pan%2C%20Santa%20Ana%2C%20Manila%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1649928497316!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                                 </div>
                                 <div class="col-lg-6">
