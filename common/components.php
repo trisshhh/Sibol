@@ -18,6 +18,12 @@ function navbarMinimal()
   include 'navbar-minimal.php';
 }
 
+
+function profileSidebar($page)
+{
+  include 'profile-sidebar.php';
+}
+
 function footer()
 {
   require_once './config/constants.php';
